@@ -1,0 +1,171 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Semantator | Помощь в фильтрации поисковых фраз</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-favicon.png"/>
+
+    <meta property="og:title" content="Упрощаем работу с семантикой">
+    <meta property="og:description" content="Помощь в фильтрации поисковых фраз. Ускоряем рутинную работу. Просто, бесплатно, без регистрации.">
+    <meta property="og:image" content="http://semantator.com/fb-logo.png">
+    <meta property="og:url" content="http://semantator.com">
+
+  </head>
+  <body>
+
+    <div id="wrap">
+      <div id="main" class="clearFX">
+
+
+          <div class="main-div">
+              <div class="row">
+                <div class="small-12 medium-6 large-12 column">
+                  <div class="logo">
+                    <h1 class="h1">Помощь в фильтрации поисковых фраз</h1>
+                    <p class="h2">Ускоряем рутинную работу. Просто, бесплатно, без регистрации</p>
+                    <p class="sub-text"><strong><u>То, что раньше вы делали руками.</u></strong> Удаляйте ненужные и группируйте похожие фразы. Формируйте минус-слова, фразы с модификаторами Google и Яндекс. Создавайте title, h1, метатеги на основе самых частых слов в поисковых фразах.</p>
+                  </div>
+                </div>
+        
+                <div class="small-12 medium-6 large-12 columns nums">
+                  <div class="num-padding show-for-medium-only"></div>
+                  <div class="row">
+                    <div class="large-4 columns">
+                      <div class="num" id="num1">
+                        <div class="num-img"><span class="label round">1</span></div>
+                        <div class="num-desc">Вставьте список фраз из <a href="https://adwords.google.com" class="label round warning">adwords.Google.com</a> или <a href="https://wordstat.yandex.ru" class="label round warning">wordstat.Yandex.ru</a></div>
+                      </div>
+                      <div class="num" id="num2">
+                        <div class="num-img"><span class="label round">2</span></div>
+                        <div class="num-desc">Нажмите "Обработать", чтобы удалить одинаковые, сгрупировать похожие фразы и разбить их на слова, из которых они состоят.</div>
+                      </div>
+                    </div>
+                    <div class="large-4 columns">
+                      <div class="num" id="num3">
+                        <div class="num-img"><span class="label round">3</span></div>
+                        <!-- <div class="num-desc">С помощью списка слов или ручного поиска отберите нужные фразы для копирования или удаления. Чтобы сбросить фильтр, нажмите "Все фразы". Чтобы взять за основу текущие отфильтрованные фразы, нажмите "Обработать"</div> -->
+                        <div class="num-desc">С помощью списка слов или ручного поиска отберите фразы для копирования/удаления. "Все фразы" сбросит фильтр, "Обработать" — запомнит текущие фразы.</div>
+                      </div>
+                      <div class="num" id="num4">
+                        <div class="num-img"><span class="label round">4</span></div>
+                        <div class="num-desc">Отобранные фразы скопируйте или удалите, добавив их в минус-слова.</div>
+                      </div>
+                    </div>
+                    <div class="large-4 columns">
+                      <div class="num" id="num5">
+                        <div class="num-img"><span class="label round">5</span></div>
+                        <div class="num-desc">В конце вы можете сгенерировать фразы с модификаторами Google и Яндекс, а также строку с самыми частыми словами для дальнейшего создания title, h1 и т. д.</div>
+                      </div>
+                      <div class="call2action">Попробуйте, как это удобно</div>
+                    </div>
+                  </div>
+                </div>
+        
+                <div class="form-padding clearfix hidden-for-large-up"></div>
+        
+                <div class="small-12 medium-6 large-4 columns">
+                  <div class="row">
+                    <div class="small-12 columns" id="filterDiv">
+                      <div class="row collapse">
+                        <div class="small-7 columns"><input type="text" placeholder="Ручной поиск" id="searchFld" class="radius"></div>
+                        <div class="small-5 columns text-right"><a class="button success radius" id="showallBtn">Все фразы</a></div>
+                      </div>
+                    </div>
+                    <div class="small-12 columns" id="keywordsDiv"><textarea placeholder="Список фраз" id="keywordsFld"></textarea></div>
+                    <div class="small-12 columns keywords">
+                        <div class="row">
+                          <div class="small-7 columns" id="handleDiv"><a class="button radius" id="handleBtn">Обработать</a></div>
+                          <div class="small-5 columns text-right" id="kwCount">Фраз: <span id="keywordsCount">0</span></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+        
+                <div class="small-12 medium-6 large-4 columns">
+                  <div class="row">
+                    <div class="small-6 columns" id="selectWords">
+                      <div class="radioSort">
+                        <input type="radio" name="radioSort" value="byAbc" id="sortByAbc" checked="checked"><label for="sortByAbc">По-порядку</label><br>
+                        <input type="radio" name="radioSort" value="byFreq" id="sortByFreq"><label for="sortByFreq">По частоте</label>
+                      </div>
+                      <select size="4" class="multiple" id="wordsList"></select>
+                    </div>
+                    <div class="small-6 columns minusLbl">
+                      <label>Минус-слова:</label>
+                      <textarea placeholder="Слова пока не добавлены" id="minusFld"></textarea>
+                    </div>
+                    <div class="minusDivPos"><div id="minusshowSel"><a class="button round" id="minusBtn">⟩</a></div></div>
+                  </div>
+                </div>
+        
+                <div class="small-12 medium-6 large-4 columns">
+                  <div class="row" id="exportID">
+                    <div class="small-12 columns exportDiv">
+                      <div class="radioExport">
+                        <input type="radio" name="radioExport" value="google" id="googleMod"><label for="googleMod">С модификаторами Google</label><br>
+                        <input type="radio" name="radioExport" value="yandex" id="yandexMod"><label for="yandexMod">С модификаторами Яндекс</label><br>
+                        <input type="radio" name="radioExport" value="metatag" id="forMetaTag"><label for="forMetaTag">Для поисковых тегов</label>
+                      </div>
+                      <textarea placeholder="Выберите по-очереди тип экспорта" id="exportFld"></textarea>
+                      <a class="label radius" id="sortExport">Сортировать</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+                
+
+
+      </div>
+    </div>
+    <div id="footer">
+      <div class="row">
+        <div class="small-12 column"><div class="footerBrd"></div></div>
+        <div class="small-12 medium-6 columns">
+          Работает в: <img src="img/browsers.png">
+        </div>
+        <div class="small-12 medium-6 columns text-right">
+            Мы в <a href="https://www.facebook.com/semantator/" target="_blank" class="label radius">FB</a> для обсуждения и заказа ПО
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+
+    <script src="js/script.js"></script>
+
+
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119940745-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119940745-1');
+</script>
+
+    
+
+
+
+  </body>
+</html>
